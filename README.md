@@ -1,7 +1,7 @@
 ---
 home: true
-heroText: vuepress-theme-reco
-tagline: A simple and beautiful vuepress blog theme.
+heroText: 个人博客
+tagline: 这里是展示自己的程序生涯的地方.
 # heroImage: /hero.png
 # heroImageStyle: {
 #   maxWidth: '600px',
@@ -25,3 +25,7 @@ features:
 - title: Tomorrow
   details: 希望更多的爱好者能够参与进来，帮助这个主题更好的成长
 ---
+
+
+
+
