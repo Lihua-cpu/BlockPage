@@ -38,6 +38,10 @@ module.exports = {
           {
             "text": "vuepress-reco",
             "link": "/docs/theme-reco/"
+          },
+          {
+            "text": "后端文件",
+            "link": "/docs/out-end/"
           }
         ]
       },
@@ -46,9 +50,14 @@ module.exports = {
         "icon": "reco-message",
         "items": [
           {
-            "text": "GitHub",
-            "link": "https://github.com/recoluan",
+            "text": "Gitee",
+            "link": "https://gitee.com/lin-jiantan",
             "icon": "reco-github"
+          },
+          {
+            "text": "稀土",
+            "link": "https://juejin.cn/user/1693677674828798",
+            "icon": "reco-boy"
           }
         ]
       }
@@ -58,6 +67,10 @@ module.exports = {
         "",
         "theme",
         "plugin",
+        "api"
+      ],
+      "/docs/out-end/": [
+        "",
         "api"
       ]
     },
