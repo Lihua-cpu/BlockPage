@@ -8,4 +8,6 @@
 官网：https://vuepress.vuejs.org/zh/config/#title
 
 gitee触发：https://juejin.cn/post/7293124262352650240?searchId=202312011340498D40ED2ED5AC2B6511A9#heading-5
+
+使用node：18.0.0
 ```
