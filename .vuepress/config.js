@@ -2,6 +2,12 @@ module.exports = {
   "title": "ljt个人博客",
   "description": "block",
   "dest": "public",
+  // 语言  
+  locales: {
+    '/': {
+      lang: 'zh-CN'
+    }
+  },
   "head": [
     [
       "link",
@@ -46,18 +52,23 @@ module.exports = {
         ]
       },
       {
-        "text": "其他联系",
+        "text": "关于本人",
         "icon": "reco-message",
         "items": [
           {
-            "text": "Gitee",
+            "text": "个人Gitee",
             "link": "https://gitee.com/lin-jiantan",
             "icon": "reco-github"
           },
           {
             "text": "稀土",
             "link": "https://juejin.cn/user/1693677674828798",
-            "icon": "reco-boy"
+            "icon": "reco-github"
+          },
+          {
+            "text": "个人介绍",
+            "link": "https://juejin.cn",
+            "icon": "reco-github"
           }
         ]
       }
@@ -87,23 +98,23 @@ module.exports = {
     },
     "friendLink": [
       {
-        "title": "午后南杂",
+        "title": "个人当铺",
         "desc": "Enjoy when you can, and endure when you must.",
-        "email": "1156743527@qq.com",
-        "link": "https://www.recoluan.com"
+        "email": "1640261289@qq.com",
+        "link": "https://www.baidu.com"
       },
-      {
-        "title": "vuepress-theme-reco",
-        "desc": "A simple and beautiful vuepress Blog & Doc theme.",
-        "avatar": "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
-        "link": "https://vuepress-theme-reco.recoluan.com"
-      }
+      // {
+      //   "title": "vuepress-theme-reco",
+      //   "desc": "A simple and beautiful vuepress Blog & Doc theme.",
+      //   "avatar": "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
+      //   "link": "https://vuepress-theme-reco.recoluan.com"
+      // }
     ],
     "logo": "/logo.png",
     "search": true,
     "searchMaxSuggestions": 10,
     "lastUpdated": "Last Updated",
-    "author": "ljt",
+    "author": "林健坛",
     "authorAvatar": "/avatar.png",
     "record": "xxxx",
     "startYear": "2017"

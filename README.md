@@ -1,7 +1,7 @@
 ---
 home: true
-heroText: 个人博客
-tagline: 这里是展示自己的程序生涯的地方.
+heroText: 程序人生
+tagline: 这里是一个个人博客.
 # heroImage: /hero.png
 # heroImageStyle: {
 #   maxWidth: '600px',
