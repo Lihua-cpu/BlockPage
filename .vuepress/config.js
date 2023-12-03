@@ -43,11 +43,15 @@ module.exports = {
         "icon": "reco-message",
         "items": [
           {
-            "text": "vuepress-reco",
-            "link": "/docs/theme-reco/"
+            "text": "vue",
+            "link": "/docs/vue/"
           },
           {
-            "text": "后端文件",
+            "text": "react",
+            "link": "/docs/react/"
+          },
+          {
+            "text": "后端",
             "link": "/docs/out-end/"
           }
         ]
