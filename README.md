@@ -11,9 +11,11 @@ tagline: 这里是一个个人博客.
 #   background: '#fff',
 #   borderRadius: '1rem',
 # }
+
 bgImageStyle: {
   height: '450px'
 }
+
 isShowTitleInHome: false
 actionText: Guide
 actionLink: /views/other/guide

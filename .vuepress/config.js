@@ -26,6 +26,7 @@ module.exports = {
   ],
   "theme": "reco",
   "themeConfig": {
+    "primaryColor": "#cd3d45",
     "nav": [
       {
         "text": "首页",
@@ -52,8 +53,13 @@ module.exports = {
         ]
       },
       {
-        "text": "关于本人",
-        "icon": "reco-message",
+        "text": "个人介绍",
+        "icon": "iconfont icon-wodexiao",
+        "link": "/blogs/interview.md",
+      },
+      {
+        "text": "其他网址",
+        "icon": "iconfont icon-maichexianbeifen",
         "items": [
           {
             "text": "个人Gitee",
@@ -63,12 +69,7 @@ module.exports = {
           {
             "text": "稀土",
             "link": "https://juejin.cn/user/1693677674828798",
-            "icon": "reco-github"
-          },
-          {
-            "text": "个人介绍",
-            "link": "https://juejin.cn",
-            "icon": "reco-github"
+            "icon": "iconfont icon-zhuanjiadayibeifen"
           }
         ]
       }
