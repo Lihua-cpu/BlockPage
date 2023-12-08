@@ -25,6 +25,7 @@ module.exports = {
     ]
   ],
   "theme": "reco",
+  
   "themeConfig": {
     "primaryColor": "#cd3d45",
     "nav": [
