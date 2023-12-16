@@ -1,4 +1,5 @@
 module.exports = {
+  "base":"/BlockPage/",
   "title": "ljt个人博客",
   "description": "block",
   "dest": "public",
