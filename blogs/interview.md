@@ -1,10 +1,12 @@
 ---
 title: 本人简历
-date: 2023-12-03
+date: 2024-12-03
 tags:
  - 个人
 categories:
- -  目录一
+ -  个人
+
+
 ---
 
 # 林健坛 - 前端工程师 - 混合移动开发 - 3年 - JavaScript
@@ -173,7 +175,7 @@ categories:
 7、  具有中级软件开发证书，在职期间努力冲刺系统分析师
 
 <div style="display:none">
-  技能
+  隐藏技能
 - **Java基础**：熟悉Java基础知识，熟悉多线程并发，熟悉JVM原理。
 - **数据库**：熟练使用Mysql、Redis及常见的优化手段。
 - **框架**：熟悉Spring Boot、MyBatis等主流开发框架，熟悉消息队列Kafka、Zookeeper的使用和原理。

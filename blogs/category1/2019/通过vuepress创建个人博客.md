@@ -2,9 +2,11 @@
 title: 通过vuepress创建个人博客并部署github
 date: 2023-12-01
 tags:
- - tag4
+ - vue
 categories: 
- - 目录二
+ - 技术方案
+sidebar: 
+ - 'auto'
 
 ---
 
