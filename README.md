@@ -1,7 +1,7 @@
 ---
 home: true
 heroText: 程序人生
-tagline: 这里是一个个人博客.
+tagline: 这里是一个个人博客,有个人介绍,知识分享.
 # heroImage: /hero.png
 # heroImageStyle: {
 #   maxWidth: '600px',
@@ -25,7 +25,7 @@ features:
 - title: Today
   details: 希望帮助更多的人花更多的时间在内容创作上，而不是博客搭建上
 - title: Tomorrow
-  details: 希望更多的爱好者能够参与进来，帮助这个主题更好的成长
+  details: 希望更多的爱好者共同讨论
 ---
 
 
