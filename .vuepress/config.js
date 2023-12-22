@@ -64,32 +64,51 @@ module.exports = {
         "link": "/blogs/interview.md",
       },
       {
-        "text": "其他网址",
+        "text": "个人其他网址",
         "icon": "iconfont icon-maichexianbeifen",
         "items": [
+          {
+            "text": "个人Github",
+            "link": "https://github.com/Lihua-cpu?tab=repositories",
+            "icon": "reco-github"
+          },
           {
             "text": "个人Gitee",
             "link": "https://gitee.com/lin-jiantan",
             "icon": "reco-github"
           },
           {
-            "text": "稀土",
+            "text": "个人稀土",
             "link": "https://juejin.cn/user/1693677674828798",
+            "icon": "iconfont icon-zhuanjiadayibeifen"
+          },
+          {
+            "text": "个人csdn",
+            "link": "https://blog.csdn.net/weixin_43525516?type=blog",
             "icon": "iconfont icon-zhuanjiadayibeifen"
           }
         ]
       }
     ],
     "sidebar": {
-      "/docs/theme-reco/": [
-        "",
-        "theme",
-        "plugin",
-        "api"
-      ],
+      // "/docs/theme-reco/": [
+      //   "",
+      //   "theme",
+      //   "plugin",
+      //   "api"
+      // ],
       "/docs/out-end/": [
         "",
-        "api"
+        'spring',
+        "api",
+        
+      ],
+      "/docs/react/": [
+        "",
+      ],
+      "/docs/vue/": [
+        "",
+        "api",
       ]
     },
     "type": "blog",

@@ -1,5 +1,5 @@
 ---
-title: 通过vuepress创建个人博客并部署github
+title: 基于vuepress开发个人博客并部署github
 date: 2023-12-01
 tags:
  - vue
@@ -26,7 +26,7 @@ sidebar:
 
 **app展示效果**
 
-<img src="../../../.vuepress/public/vuepress2.png" style="height:600px;width:300px;" />
+<img src="../../../.vuepress/public/vuepress2.jpeg" style="height:600px;width:300px;" />
 
 # 入门
 
