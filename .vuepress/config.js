@@ -86,6 +86,11 @@ module.exports = {
             "text": "个人csdn",
             "link": "https://blog.csdn.net/weixin_43525516?type=blog",
             "icon": "iconfont icon-zhuanjiadayibeifen"
+          },
+          {
+            "text": "个人App",
+            "icon": "iconfont icon-wodexiao",
+            "link": "/blogs/other/appInterview.md",
           }
         ]
       }
