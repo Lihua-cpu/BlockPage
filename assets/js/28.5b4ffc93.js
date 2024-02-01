@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[28],{481:function(t,n,s){"use strict";s.r(n);var e=s(2),o=Object(e.a)({},(function(){var t=this._self._c;return t("ContentSlotsDistributor",{attrs:{"slot-key":this.$parent.slotKey}},[t("p",[this._v("这里写对于2023年的总结，具体几个方面：\n1、对于职场\n2、对于自己技术\n3、对于未来展望\n4、待续...")])])}),[],!1,null,null,null);n.default=o.exports}}]);
