@@ -15,16 +15,14 @@ categories:
 
 # 一、下载地址
 
-<div>
-<img src="../../.vuepress/public/images/stackapp/interviewDownload.png" style="height:500px;" />
+<div style="overflow-x: scroll;heigth:500px;width:800px;display:flex">
+    <img src="../../.vuepress/public/images/stackapp/interviewDownload.png" style="height:500px;width:800px" />
 </div>
 
 # 二、应用介绍
 
-
-
-<div>
-<img src="../../.vuepress/public/images/stackapp/interviewApp.png" style="height:500px;" />
+<div style="overflow-x: scroll;heigth:500px;width:800px;display:flex">
+    <img src="../../.vuepress/public/images/stackapp/interviewApp.png" style="height:500px;width:800px" />
 </div>
 
 
