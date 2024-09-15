@@ -58,11 +58,11 @@ module.exports = {
           }
         ]
       },
-      {
-        "text": "个人介绍",
-        "icon": "iconfont icon-wodexiao",
-        "link": "/blogs/interview.md",
-      },
+      // {
+      //   "text": "个人介绍",
+      //   "icon": "iconfont icon-wodexiao",
+      //   "link": "/blogs/interview.md",
+      // },
       {
         "text": "个人其他网址",
         "icon": "iconfont icon-maichexianbeifen",

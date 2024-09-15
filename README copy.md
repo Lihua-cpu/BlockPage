@@ -12,9 +12,11 @@ gitee触发：https://juejin.cn/post/7293124262352650240?searchId=20231201134049
 使用node：16.0.0以上的版本
 
 
+
 需要准备: 
 1、vscode、node环境
 2、拉取代码推荐使用sourcetree(免费)、fork(收费)
+3、注意一般来说如果build失败了，可能是因为本地的.md引入本地资源报错
 
 运行:npm run dev
 
