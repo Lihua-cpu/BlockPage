@@ -152,13 +152,15 @@ Create：创建仓库
 
 1.本地新建仓库未推送过
 
-
+<div>
+	<img src="../../../.vuepress\public\images\sourcetree\17_sourcetree_use.png" style="height:100%;width:100%" />
+</div>
 
 2.远程有仓库推送
 
-
-
-
+<div>
+	<img src="../../../.vuepress\public\images\sourcetree\18_sourcetree_use.png" style="height:100%;width:100%" />
+</div>
 
 
 
@@ -196,26 +198,54 @@ Create：创建仓库
 
 ### 4.6添加分支
 
+常用分支策略如下：
+
+一般会分为三种分支，分别是主分支（master），开发分支（develop）和修补bug分支（fixbug）。
+
+代码库应该有一个、且仅有一个主分支。所有提供给用户使用的正式版本，都在这个主分支上发布。
+
+主分支只用来分布重大版本，日常开发应该在另一条分支上完成。但是实际生产钟除了这几个，还会有灰度环境分支、业务测试分支等
+
+1.本地新建分支
+
+<div>
+	<img src="../../../.vuepress\public\images\sourcetree\19_sourcetree_use.png" style="height:80%;width:80%" />
+</div>
+
+2.推到远程
+
 
 
 ### 4.7切换分支
 
+
+
 ### 4.8合并
+
+
 
 ### 4.9解决冲突
 
+
+
 ### 4.10删除分支
+
+
 
 ### 4.11撤回
 
+
+
 ### 4.12回滚
+
+
 
 
 
 ## 五、总结
 
 - 一般来说使用最多的是clone、checkout、合并、拉取分支、回滚、pull、push
-- 一般来说小编习惯结合vscode来解决代码冲突
+- 一般来说小编习惯结合vscode来解决代码冲突（面对冲突时vscode可以识别并快速解决）
 
 ## 六、常见问题
 
@@ -228,6 +258,10 @@ Create：创建仓库
 原理：git允许多方式拉代码，如果配置了多方式会导致git无法可能校验身份，所以导致每次拉去代码需要输入账号密码
 
 其他解决：1、git提供了规则拉取，可以去设置规则；2、具体仓库读取具体仓库配置
+
+## 七、参考
+
+1、https://blog.csdn.net/weixin_35714547/article/details/134870504
 
 
 
