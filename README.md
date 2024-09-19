@@ -1,16 +1,17 @@
 ---
 home: true
-heroText: 程序人生
-tagline: 这里是一个个人博客,有个人介绍,知识分享.
-# heroImage: /hero.png
-# heroImageStyle: {
-#   maxWidth: '600px',
-#   width: '100%',
-#   display: block,
-#   margin: '9rem auto 2rem',
-#   background: '#fff',
-#   borderRadius: '1rem',
-# }
+heroText: 探索编程的世界，分享成长的旅程
+# tagline: 欢迎来到我的个人博客，这里是我对编程的热情与思考的汇聚地。在这个平台上，我将分享我的学习经验、项目实战、工具推荐和技术文章，希望能帮助同行者一起成长。无论你是编程新手还是经验丰富的开发者，这里都有值得你阅读的内容。让我们一起在代码的海洋中探索与前行！
+tagline: null
+heroImage: /manyouzhe.png
+heroImageStyle: {
+  maxWidth: '600px',
+  width: '100%',
+  display: block,
+  margin: '9rem auto 2rem',
+  background: '#fff',
+  borderRadius: '1rem',
+}
 
 bgImageStyle: {
   height: '450px'

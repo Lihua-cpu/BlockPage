@@ -1,7 +1,7 @@
 module.exports = {
   "base":"/BlockPage/",
-  "title": "ljt个人博客",
-  "description": "block",
+  "title": "漫游者的世界",
+  "description": "",
   "dest": "public",
   // 语言  
   locales: {
@@ -145,10 +145,10 @@ module.exports = {
     "search": true,
     "searchMaxSuggestions": 10,
     "lastUpdated": "Last Updated",
-    "author": "林健坛",
+    "author": "ljt",
     "authorAvatar": "/avatar.png",
     "record": "xxxx",
-    "startYear": "2017"
+    "startYear": "2023",
   },
   "markdown": {
     "lineNumbers": true
