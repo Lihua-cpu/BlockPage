@@ -1,6 +1,6 @@
 module.exports = {
   "base":"/BlockPage/",
-  "title": "漫游者的世界",
+  "title": "忆梦世界",
   "description": "",
   "dest": "public",
   // 语言  
