@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>基于js的数据结构 | 忆梦世界</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/BlockPage/favicon.ico">
+    <meta name="description" content="算法入门">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/BlockPage/assets/css/0.styles.a5d53f1e.css" as="style"><link rel="preload" href="/BlockPage/assets/js/app.e0755670.js" as="script"><link rel="preload" href="/BlockPage/assets/js/3.1cac54e6.js" as="script"><link rel="preload" href="/BlockPage/assets/js/1.60ac1d5d.js" as="script"><link rel="preload" href="/BlockPage/assets/js/13.e73038a4.js" as="script"><link rel="prefetch" href="/BlockPage/assets/js/10.c4d2ea98.js"><link rel="prefetch" href="/BlockPage/assets/js/11.11e3ec6b.js"><link rel="prefetch" href="/BlockPage/assets/js/12.f60c7358.js"><link rel="prefetch" href="/BlockPage/assets/js/14.100c5700.js"><link rel="prefetch" href="/BlockPage/assets/js/15.bbe03cf5.js"><link rel="prefetch" href="/BlockPage/assets/js/16.cfc772a3.js"><link rel="prefetch" href="/BlockPage/assets/js/17.05d24059.js"><link rel="prefetch" href="/BlockPage/assets/js/18.b6e203c7.js"><link rel="prefetch" href="/BlockPage/assets/js/19.bbe179a9.js"><link rel="prefetch" href="/BlockPage/assets/js/20.2a426f7a.js"><link rel="prefetch" href="/BlockPage/assets/js/21.eedbab06.js"><link rel="prefetch" href="/BlockPage/assets/js/22.fbc3e643.js"><link rel="prefetch" href="/BlockPage/assets/js/23.368303b1.js"><link rel="prefetch" href="/BlockPage/assets/js/24.4d3ba923.js"><link rel="prefetch" href="/BlockPage/assets/js/25.65b50a3f.js"><link rel="prefetch" href="/BlockPage/assets/js/26.cd079d7c.js"><link rel="prefetch" href="/BlockPage/assets/js/27.817ec729.js"><link rel="prefetch" href="/BlockPage/assets/js/28.9a8a7129.js"><link rel="prefetch" href="/BlockPage/assets/js/29.4428032a.js"><link rel="prefetch" href="/BlockPage/assets/js/30.4bbd7322.js"><link rel="prefetch" href="/BlockPage/assets/js/31.30fd3d77.js"><link rel="prefetch" href="/BlockPage/assets/js/32.ffa54f99.js"><link rel="prefetch" href="/BlockPage/assets/js/33.dc473b32.js"><link rel="prefetch" href="/BlockPage/assets/js/34.be3da787.js"><link rel="prefetch" href="/BlockPage/assets/js/35.81cdbb3e.js"><link rel="prefetch" href="/BlockPage/assets/js/36.3d44601c.js"><link rel="prefetch" href="/BlockPage/assets/js/37.6b27fae1.js"><link rel="prefetch" href="/BlockPage/assets/js/38.a880088e.js"><link rel="prefetch" href="/BlockPage/assets/js/39.6caec71d.js"><link rel="prefetch" href="/BlockPage/assets/js/4.f4d4a1f1.js"><link rel="prefetch" href="/BlockPage/assets/js/40.303b71d4.js"><link rel="prefetch" href="/BlockPage/assets/js/5.dc80210c.js"><link rel="prefetch" href="/BlockPage/assets/js/6.24a464e0.js"><link rel="prefetch" href="/BlockPage/assets/js/7.05e9588f.js"><link rel="prefetch" href="/BlockPage/assets/js/8.506fdc2d.js"><link rel="prefetch" href="/BlockPage/assets/js/9.80c87b8e.js">
+    <link rel="stylesheet" href="/BlockPage/assets/css/0.styles.a5d53f1e.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>忆梦世界</h3> <p class="description" data-v-59e6cb88></p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>ljt</span>
+          
+        <span data-v-59e6cb88>2023 - </span>
+        2024
+      </a></span></div></div> <div class="hide" data-v-7dd95ae2><header class="navbar" data-v-7dd95ae2><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/BlockPage/" class="home-link router-link-active"><img src="/BlockPage/logo.png" alt="忆梦世界" class="logo"> <span class="site-name">忆梦世界</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/BlockPage/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      目录
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/BlockPage/categories/技术方案/" class="nav-link"><i class="undefined"></i>
+  技术方案
+</a></li><li class="dropdown-item"><!----> <a href="/BlockPage/categories/开发工具/" class="nav-link"><i class="undefined"></i>
+  开发工具
+</a></li><li class="dropdown-item"><!----> <a href="/BlockPage/categories/知识分享/" class="nav-link"><i class="undefined"></i>
+  知识分享
+</a></li><li class="dropdown-item"><!----> <a href="/BlockPage/categories/个人/" class="nav-link"><i class="undefined"></i>
+  个人
+</a></li></ul></div></div><div class="nav-item"><a href="/BlockPage/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      文档
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/BlockPage/docs/vue/" class="nav-link"><i class="undefined"></i>
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/BlockPage/docs/react/" class="nav-link"><i class="undefined"></i>
+  react
+</a></li><li class="dropdown-item"><!----> <a href="/BlockPage/docs/out-end/" class="nav-link"><i class="undefined"></i>
+  后端
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont icon-maichexianbeifen"></i>
+      个人其他网址
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/Lihua-cpu?tab=repositories" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  个人Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://gitee.com/lin-jiantan" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  个人Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://juejin.cn/user/1693677674828798" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont icon-zhuanjiadayibeifen"></i>
+  个人稀土
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://blog.csdn.net/weixin_43525516?type=blog" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont icon-zhuanjiadayibeifen"></i>
+  个人csdn
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="/BlockPage/blogs/other/appInterview.html" class="nav-link"><i class="iconfont icon-wodexiao"></i>
+  个人App
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><img src="/BlockPage/avatar.png" alt="author-avatar" class="personal-img" data-v-1fad0c41> <h3 class="name" data-v-1fad0c41>
+    ljt
+  </h3> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>30</h3> <h6 data-v-1fad0c41>文章</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>8</h3> <h6 data-v-1fad0c41>标签</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/BlockPage/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      目录
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/BlockPage/categories/技术方案/" class="nav-link"><i class="undefined"></i>
+  技术方案
+</a></li><li class="dropdown-item"><!----> <a href="/BlockPage/categories/开发工具/" class="nav-link"><i class="undefined"></i>
+  开发工具
+</a></li><li class="dropdown-item"><!----> <a href="/BlockPage/categories/知识分享/" class="nav-link"><i class="undefined"></i>
+  知识分享
+</a></li><li class="dropdown-item"><!----> <a href="/BlockPage/categories/个人/" class="nav-link"><i class="undefined"></i>
+  个人
+</a></li></ul></div></div><div class="nav-item"><a href="/BlockPage/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      文档
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/BlockPage/docs/vue/" class="nav-link"><i class="undefined"></i>
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/BlockPage/docs/react/" class="nav-link"><i class="undefined"></i>
+  react
+</a></li><li class="dropdown-item"><!----> <a href="/BlockPage/docs/out-end/" class="nav-link"><i class="undefined"></i>
+  后端
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont icon-maichexianbeifen"></i>
+      个人其他网址
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/Lihua-cpu?tab=repositories" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  个人Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://gitee.com/lin-jiantan" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  个人Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://juejin.cn/user/1693677674828798" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont icon-zhuanjiadayibeifen"></i>
+  个人稀土
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://blog.csdn.net/weixin_43525516?type=blog" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont icon-zhuanjiadayibeifen"></i>
+  个人csdn
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="/BlockPage/blogs/other/appInterview.html" class="nav-link"><i class="iconfont icon-wodexiao"></i>
+  个人App
+</a></li></ul></div></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>基于js的数据结构</h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>ljt</span>
+          
+        <span data-v-59e6cb88>2023 - </span>
+        2024
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page" style="padding-right:0;"><section style="display:;"><div class="page-title"><h1 class="title">基于js的数据结构</h1> <div data-v-8a445198><i class="iconfont reco-account" data-v-8a445198><span data-v-8a445198>ljt</span></i> <i class="iconfont reco-date" data-v-8a445198><span data-v-8a445198>2023/12/24</span></i> <!----> <i class="tags iconfont reco-tag" data-v-8a445198><span class="tag-item" data-v-8a445198>算法</span></i></div></div> <div class="theme-reco-content content__default"><h1 id="一、前沿"><a href="#一、前沿" class="header-anchor">#</a> 一、前沿</h1> <h2 id="亮点"><a href="#亮点" class="header-anchor">#</a> 亮点：</h2> <p>1、思维导图</p> <p>2、js实现</p> <p>3、参考资料</p> <p>4、思维导图里面的算法可视化网站</p> <h1 id="二、思维导图"><a href="#二、思维导图" class="header-anchor">#</a> 二、思维导图</h1> <p>三个思维导图：前面两个是什么语言都是通用的，第三个是基于js的，可以结合前面两个和js语言特点来实现。</p> <p>这三个思维导图还是挺有保存意义的</p> <h2 id="计算机数据结构思维导图"><a href="#计算机数据结构思维导图" class="header-anchor">#</a> 计算机数据结构思维导图</h2> <div><img src="/BlockPage/assets/img/1.a1a312d7.png"></div> <h2 id="计算机算法思维导图"><a href="#计算机算法思维导图" class="header-anchor">#</a> 计算机算法思维导图</h2> <div><img src="/BlockPage/assets/img/2.f1ccf067.png"></div> <h2 id="js数据结构"><a href="#js数据结构" class="header-anchor">#</a> JS数据结构</h2> <div><img src="/BlockPage/assets/img/3.f6045c42.png"></div> <h1 id="二、概要"><a href="#二、概要" class="header-anchor">#</a> 二、概要</h1> <p>先要了解数据结构，在了解算法，然后是相辅相成。因为有些算法是基于数据结构来实现的</p> <p>js的数据结构有自己的特点，而且内置api有JSON这种与数据结构相关的</p> <h1 id="三、数据结构"><a href="#三、数据结构" class="header-anchor">#</a> 三、数据结构</h1> <h2 id="_3-1、非受限数据结构"><a href="#_3-1、非受限数据结构" class="header-anchor">#</a> 3.1、非受限数据结构</h2> <p>这个主要是说一些不受条件限制的一些数据结构比如：数组、链表，关于数组，js有提供专门的容器比如Array，但是链表来说，需要自己定义或者第三方</p> <h3 id="数组array"><a href="#数组array" class="header-anchor">#</a> 数组array</h3> <p>描述</p> <ul><li>主要分为一维数组、二维数组，多维数组</li> <li>优点：随机访问：可以通过索引在 O(1) 时间内快速访问任何元素；内存效率：所有元素存储在连续的内存位置，访问速度较快。</li> <li>缺点：a插入和删除效率低：在数组中间插入或删除元素时，可能需要移动大量元素，时间复杂度为 O(n)。b固定大小：一旦创建，数组的大小通常是固定的，无法动态扩展。</li></ul> <p><strong>关于缺点</strong></p> <p>主要是js内置了array，扩展数组长度能够看起来无感，其实看源代码，比如java的数组，他的实现ArrayList，里面的对push操作有判断，需要如果超过了就需要分配空间，但是对于js来说可以不固定。</p> <p><strong>基于js的操作</strong></p> <p>具体可以看说明书：https://developer.mozilla.org/zh-CN/docs/Web/JavaScript</p> <p>const arr = [1, 2, 3];</p> <ul><li>添加元素</li></ul> <p>arr.push(4); <em>// arr 变为 [1, 2, 3, 4]</em></p> <p>arr.unshift(0); <em>// arr 变为 [0, 1, 2, 3, 4]</em></p> <ul><li>删除元素</li></ul> <p>const last = arr.pop(); <em>// last 是 4, arr 变为 [0, 1, 2, 3]</em></p> <p>const first = arr.shift(); <em>// first 是 0, arr 变为 [1, 2, 3]</em></p> <ul><li>访问元素</li></ul> <p>const firstElement = arr[0]; <em>// 访问第一个元素</em></p> <p>arr[1] = 5; <em>// 修改第二个元素</em></p> <ul><li>遍历元素</li></ul> <p>for (let i = 0; i &lt; arr.length; i++) { console.log(arr[i]); }</p> <p>arr.forEach((element) =&gt; { console.log(element); });</p> <ul><li>数组操作</li></ul> <p>const newArr = arr.slice(1, 3); <em>// 返回 [2, 3]</em></p> <p>arr.splice(1, 1, 10); <em>// 从索引1开始删除1个元素并添加10，arr 变为 [1, 10, 3]</em></p> <ul><li>查找</li></ul> <p>const index = arr.indexOf(10); <em>// 返回 1</em></p> <p>const hasTen = arr.includes(10); <em>// 返回 true</em></p> <ul><li>数组反转与排序</li></ul> <p>arr.sort(); <em>// 默认按字符串Unicode顺序排序</em></p> <p>arr.reverse(); <em>// arr 反转</em></p> <ul><li>合并数组</li></ul> <p>const arr1 = [1, 2];</p> <p>const arr2 = [3, 4];</p> <p>const combined = arr1.concat(arr2); <em>// [1, 2, 3, 4]</em></p> <ul><li>转化数组</li></ul> <p>const str = arr.join('-'); <em>// '1-10-3'</em></p> <p>使用场景</p> <ul><li>存列表数据</li> <li>排序和过滤</li> <li>实现队列、栈</li></ul> <h3 id="链表link"><a href="#链表link" class="header-anchor">#</a> 链表link</h3> <p>具体讲解链表需要单独开文章（TODO）</p> <p>描述</p> <ul><li>链表也有多种：单链表、双链表、循环链表</li></ul> <p>js（单链表）实现</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token comment">// 1、新建节点类（Node）</span>
+<span class="token keyword">class</span> <span class="token class-name">Node</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>data <span class="token operator">=</span> data<span class="token punctuation">;</span> <span class="token comment">// 节点数据</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>next <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span> <span class="token comment">// 指向下一个节点的引用</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 2、新建链表类（LinkedList）</span>
+<span class="token keyword">class</span> <span class="token class-name">LinkedList</span> <span class="token punctuation">{</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>head <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span> <span class="token comment">// 链表的头节点</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>size <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>    <span class="token comment">// 链表的大小</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// 添加节点到链表末尾</span>
+    <span class="token function">append</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> newNode <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Node</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>head<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>head <span class="token operator">=</span> newNode<span class="token punctuation">;</span> <span class="token comment">// 如果链表为空，头节点指向新节点</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token keyword">let</span> current <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>head<span class="token punctuation">;</span>
+            <span class="token keyword">while</span> <span class="token punctuation">(</span>current<span class="token punctuation">.</span>next<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                current <span class="token operator">=</span> current<span class="token punctuation">.</span>next<span class="token punctuation">;</span> <span class="token comment">// 遍历到链表末尾</span>
+            <span class="token punctuation">}</span>
+            current<span class="token punctuation">.</span>next <span class="token operator">=</span> newNode<span class="token punctuation">;</span> <span class="token comment">// 将新节点添加到末尾</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>size<span class="token operator">++</span><span class="token punctuation">;</span> <span class="token comment">// 增加链表大小</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// 插入节点到指定位置</span>
+    <span class="token function">insert</span><span class="token punctuation">(</span><span class="token parameter">data<span class="token punctuation">,</span> index</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>index <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token operator">||</span> index <span class="token operator">&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span>size<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span><span class="token punctuation">;</span> <span class="token comment">// 索引无效</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">const</span> newNode <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Node</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>index <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            newNode<span class="token punctuation">.</span>next <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>head<span class="token punctuation">;</span> <span class="token comment">// 头插</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>head <span class="token operator">=</span> newNode<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token keyword">let</span> current <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>head<span class="token punctuation">;</span>
+            <span class="token keyword">let</span> previous<span class="token punctuation">;</span>
+            <span class="token keyword">let</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+            <span class="token keyword">while</span> <span class="token punctuation">(</span>count <span class="token operator">&lt;</span> index<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                previous <span class="token operator">=</span> current<span class="token punctuation">;</span> <span class="token comment">// 记录前一个节点</span>
+                current <span class="token operator">=</span> current<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+                count<span class="token operator">++</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            newNode<span class="token punctuation">.</span>next <span class="token operator">=</span> current<span class="token punctuation">;</span> <span class="token comment">// 新节点指向当前节点</span>
+            previous<span class="token punctuation">.</span>next <span class="token operator">=</span> newNode<span class="token punctuation">;</span> <span class="token comment">// 前一个节点指向新节点</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>size<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// 删除指定位置的节点</span>
+    <span class="token function">remove</span><span class="token punctuation">(</span><span class="token parameter">index</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>index <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token operator">||</span> index <span class="token operator">&gt;=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>size<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span><span class="token punctuation">;</span> <span class="token comment">// 索引无效</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">let</span> current <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>head<span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>index <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>head <span class="token operator">=</span> current<span class="token punctuation">.</span>next<span class="token punctuation">;</span> <span class="token comment">// 删除头节点</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token keyword">let</span> previous<span class="token punctuation">;</span>
+            <span class="token keyword">let</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+            <span class="token keyword">while</span> <span class="token punctuation">(</span>count <span class="token operator">&lt;</span> index<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                previous <span class="token operator">=</span> current<span class="token punctuation">;</span>
+                current <span class="token operator">=</span> current<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+                count<span class="token operator">++</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            previous<span class="token punctuation">.</span>next <span class="token operator">=</span> current<span class="token punctuation">.</span>next<span class="token punctuation">;</span> <span class="token comment">// 前一个节点跳过当前节点</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>size<span class="token operator">--</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// 打印链表</span>
+    <span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> current <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>head<span class="token punctuation">;</span>
+        <span class="token keyword">const</span> elements <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>current<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            elements<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>current<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            current <span class="token operator">=</span> current<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>elements<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">' -&gt; '</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 3、使用</span>
+<span class="token keyword">const</span> list <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">LinkedList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+list<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+list<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+list<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+list<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 输出: 10 -&gt; 20 -&gt; 30</span>
+
+list<span class="token punctuation">.</span><span class="token function">insert</span><span class="token punctuation">(</span><span class="token number">15</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+list<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 输出: 10 -&gt; 15 -&gt; 20 -&gt; 30</span>
+
+list<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+list<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 输出: 10 -&gt; 15 -&gt; 30</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br></div></div><p>使用场景</p> <ul><li>动态大小的数据存储</li> <li>实现队列和栈</li> <li>特定算法的实现（某些算法（如链表排序、合并两个有序链表）直接使用单链表作为基础数据结构，以提高效率。）</li> <li>多线程或异步处理（在需要处理任务队列的多线程或异步环境中，单链表可以用于维护任务的顺序，确保按顺序处理。）</li> <li>图形和游戏开发</li></ul> <h2 id="_3-2、受限数据结构"><a href="#_3-2、受限数据结构" class="header-anchor">#</a> 3.2、受限数据结构</h2> <p>受限的比如栈、队列、堆，但是js没有内置提供专门的api、属性，所以需要自己实现或者第三方</p> <h3 id="栈stack"><a href="#栈stack" class="header-anchor">#</a> 栈stack</h3> <p>描述</p> <ul><li>栈的一般限制是先进后出</li></ul> <p>js实现：</p> <div class="language-vue line-numbers-mode"><pre class="language-vue"><code>class Stack {
+    constructor() {
+        this.items = []; // 存储栈的元素
+    }
+
+    // 入栈
+    push(element) {
+        this.items.push(element);
+    }
+
+    // 出栈
+    pop() {
+        if (this.isEmpty()) {
+            return null; // 栈为空，返回null
+        }
+        return this.items.pop();
+    }
+
+    // 查看栈顶元素
+    peek() {
+        if (this.isEmpty()) {
+            return null; // 栈为空，返回null
+        }
+        return this.items[this.items.length - 1];
+    }
+
+    // 检查栈是否为空
+    isEmpty() {
+        return this.items.length === 0;
+    }
+
+    // 返回栈的大小
+    size() {
+        return this.items.length;
+    }
+
+    // 打印栈
+    print() {
+        console.log(this.items.join(' '));
+    }
+}
+
+// 使用示例
+const stack = new Stack();
+stack.push(10);
+stack.push(20);
+stack.push(30);
+stack.print(); // 输出: 10 20 30
+console.log(stack.pop()); // 输出: 30
+console.log(stack.peek()); // 输出: 20
+stack.print(); // 输出: 10 20
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br></div></div><p>基本操作</p> <ul><li>入栈（Push）：将元素添加到栈的顶部。</li> <li>出栈（Pop）：移除并返回栈顶部的元素。</li> <li>查看栈顶元素（Peek）：返回栈顶部的元素，但不移除它。</li> <li>检查栈是否为空（IsEmpty）：判断栈中是否还有元素。</li></ul> <p>常用场景：</p> <ul><li>函数调用管理</li> <li>撤销功能</li> <li>深度优先搜索（DFS）</li> <li>状态管理</li></ul> <h3 id="队列queue"><a href="#队列queue" class="header-anchor">#</a> 队列queue</h3> <p>描述</p> <ul><li>队列来说一般是先进先出</li> <li>队列来说是单端队列，也可以双端队列</li></ul> <p>js实现双端队列：</p> <div class="language-vue line-numbers-mode"><pre class="language-vue"><code>class Deque {
+    constructor() {
+        this.items = [];
+    }
+
+    // 从队尾插入元素
+    enqueueBack(element) {
+        this.items.push(element);
+    }
+
+    // 从队首插入元素
+    enqueueFront(element) {
+        this.items.unshift(element);
+    }
+
+    // 从队首移除元素
+    dequeueFront() {
+        if (this.isEmpty()) {
+            return null; // 或者抛出错误
+        }
+        return this.items.shift();
+    }
+
+    // 从队尾移除元素
+    dequeueBack() {
+        if (this.isEmpty()) {
+            return null; // 或者抛出错误
+        }
+        return this.items.pop();
+    }
+
+    // 查看队首元素
+    front() {
+        if (this.isEmpty()) {
+            return null; // 或者抛出错误
+        }
+        return this.items[0];
+    }
+
+    // 查看队尾元素
+    back() {
+        if (this.isEmpty()) {
+            return null; // 或者抛出错误
+        }
+        return this.items[this.items.length - 1];
+    }
+
+    // 检查双端队列是否为空
+    isEmpty() {
+        return this.items.length === 0;
+    }
+
+    // 获取双端队列的大小
+    size() {
+        return this.items.length;
+    }
+
+    // 清空双端队列
+    clear() {
+        this.items = [];
+    }
+}
+
+// 使用示例
+const deque = new Deque();
+deque.enqueueBack(1);
+deque.enqueueBack(2);
+deque.enqueueFront(0);
+
+console.log(deque.front()); // 输出: 0
+console.log(deque.back());  // 输出: 2
+
+console.log(deque.dequeueFront()); // 输出: 0
+console.log(deque.dequeueBack());  // 输出: 2
+
+console.log(deque.size()); // 输出: 1
+console.log(deque.isEmpty()); // 输出: false
+
+deque.clear();
+console.log(deque.isEmpty()); // 输出: true
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br></div></div><p>操作：</p> <ul><li>enqueueBack：在队尾插入元素。</li> <li>enqueueFront：在队首插入元素。</li> <li>dequeueFront：从队首移除并返回元素。</li> <li>dequeueBack：从队尾移除并返回元素。</li> <li>front：查看队首元素但不移除。</li> <li>back：查看队尾元素但不移除。</li> <li>isEmpty：检查双端队列是否为空。</li> <li>size：返回双端队列中元素的数量。</li> <li>clear：清空双端队列。</li></ul> <p>常用场景：</p> <ol><li>任务调度：在需要优先处理的任务和普通任务之间进行高效管理时，可以将优先任务插入队首，普通任务插入队尾。</li> <li>缓存实现：如 LRU（最近最少使用）缓存策略，可以使用双端队列来快速地将最近使用的项移动到队首，过期的项可以从队尾移除。</li> <li>回溯算法：在深度优先搜索（DFS）或某些图形遍历中，可以使用双端队列来存储路径，从而能够在遍历过程中灵活地添加和删除节点。</li> <li>字符串处理：在需要频繁地从两端添加或删除字符的场景中，比如回文判断，可以使用双端队列来高效管理字符串的状态。</li> <li>消息队列：在实时系统或网络服务中，双端队列可以用来实现生产者-消费者模式，允许生产者在两端添加消息，消费者则可以从任意一端取出消息。</li> <li>滑动窗口问题：在处理需要跟踪数据流的滑动窗口问题时，双端队列可以有效维护当前窗口的状态，支持快速插入和删除。</li></ol> <h3 id="堆heap"><a href="#堆heap" class="header-anchor">#</a> 堆heap</h3> <p>描述</p> <ul><li>堆是一种特殊的树形数据结构。更具体地说，堆是一种完全二叉树</li> <li>堆是一个完全二叉树，这意味着除了最后一层外，每一层都是完全填满的，最后一层的节点都在左侧</li> <li>堆可以是最大堆或最小堆（最大堆：每个节点的值都大于或等于其子节点的值，最小堆：每个节点的值都小于或等于其子节点的值。）</li></ul> <p>js的最小堆实现</p> <p>下面是通过数组array实现的，根据链表的还没实现</p> <div class="language-vue line-numbers-mode"><pre class="language-vue"><code>class MinHeap {
+    constructor() {
+        this.heap = [];
+    }
+
+    // 获取父节点索引
+    getParentIndex(index) {
+        return Math.floor((index - 1) / 2);
+    }
+
+    // 获取左子节点索引
+    getLeftChildIndex(index) {
+        return index * 2 + 1;
+    }
+
+    // 获取右子节点索引
+    getRightChildIndex(index) {
+        return index * 2 + 2;
+    }
+
+    // 交换两个元素
+    swap(index1, index2) {
+        [this.heap[index1], this.heap[index2]] = [this.heap[index2], this.heap[index1]];
+    }
+
+    // 向堆中插入元素
+    insert(value) {
+        this.heap.push(value);
+        this.bubbleUp();
+    }
+
+    // 上浮操作
+    bubbleUp() {
+        let index = this.heap.length - 1;
+        while (index &gt; 0) {
+            const parentIndex = this.getParentIndex(index);
+            if (this.heap[index] &gt;= this.heap[parentIndex]) break;
+            this.swap(index, parentIndex);
+            index = parentIndex;
+        }
+    }
+
+    // 从堆中删除最小元素
+    extractMin() {
+        if (this.heap.length === 0) return null;
+        if (this.heap.length === 1) return this.heap.pop();
+
+        const min = this.heap[0];
+        this.heap[0] = this.heap.pop();
+        this.bubbleDown();
+        return min;
+    }
+
+    // 下沉操作
+    bubbleDown() {
+        let index = 0;
+        const length = this.heap.length;
+
+        while (true) {
+            const leftChildIndex = this.getLeftChildIndex(index);
+            const rightChildIndex = this.getRightChildIndex(index);
+            let smallestIndex = index;
+
+            if (leftChildIndex &lt; length &amp;&amp; this.heap[leftChildIndex] &lt; this.heap[smallestIndex]) {
+                smallestIndex = leftChildIndex;
+            }
+
+            if (rightChildIndex &lt; length &amp;&amp; this.heap[rightChildIndex] &lt; this.heap[smallestIndex]) {
+                smallestIndex = rightChildIndex;
+            }
+
+            if (smallestIndex === index) break;
+
+            this.swap(index, smallestIndex);
+            index = smallestIndex;
+        }
+    }
+
+    // 获取最小元素但不移除
+    peek() {
+        return this.heap[0] || null;
+    }
+
+    // 获取堆的大小
+    size() {
+        return this.heap.length;
+    }
+
+    // 检查堆是否为空
+    isEmpty() {
+        return this.size() === 0;
+    }
+}
+
+// 使用示例
+const minHeap = new MinHeap();
+minHeap.insert(10);
+minHeap.insert(5);
+minHeap.insert(3);
+minHeap.insert(8);
+
+console.log(minHeap.peek()); // 输出: 3
+console.log(minHeap.extractMin()); // 输出: 3
+console.log(minHeap.peek()); // 输出: 5
+console.log(minHeap.size()); // 输出: 3
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br></div></div><p>常用场景</p> <p>堆通常用于实现优先队列，支持高效的插入和删除最大（或最小）元素操作。虽然堆通常用数组实现，但其结构本质上是树形的。</p> <h2 id="_3-3、树"><a href="#_3-3、树" class="header-anchor">#</a> 3.3、树</h2> <p>主要讲二叉树、哈夫曼树、字典树</p> <p>1、树是一种逻辑结构，所以基于js能用array、linkList实现，其他语言如java，也可以用ArrayList、linkList实现等</p> <h3 id="_3-3-1、普通二叉树-binary-tree"><a href="#_3-3-1、普通二叉树-binary-tree" class="header-anchor">#</a> 3.3.1、普通二叉树（Binary Tree）</h3> <ul><li><strong>定义</strong>：普通二叉树是一个每个节点最多有两个子节点的树结构，没有其他特定的约束。</li> <li><strong>特点</strong>：节点的分布没有限制，可以是任何形状。</li></ul> <h3 id="_3-3-2、满二叉树-full-binary-tree"><a href="#_3-3-2、满二叉树-full-binary-tree" class="header-anchor">#</a> 3.3.2、满二叉树（Full Binary Tree）</h3> <ul><li><strong>定义</strong>：每个非叶子节点都有两个子节点，且所有的叶子节点在同一层上。</li> <li><strong>特点</strong>：结构非常规则，所有节点都被完全填满。</li> <li><strong>关系</strong>：满二叉树是普通二叉树的一种特例。</li> <li>解释：如何最后子节点没满，就不是满二叉树</li></ul> <h3 id="_3-3-3、-完全二叉树-complete-binary-tree"><a href="#_3-3-3、-完全二叉树-complete-binary-tree" class="header-anchor">#</a> 3.3.3、 完全二叉树（Complete Binary Tree）</h3> <ul><li><strong>定义</strong>：除了最后一层外，每一层都被完全填满，最后一层的节点必须从左到右填充。</li> <li><strong>特点</strong>：最后一层可以不满，但节点填充是左对齐的。</li> <li><strong>关系</strong>：完全二叉树也是普通二叉树的一种特例，但它比满二叉树更宽松，因为最后一层可以不满。</li></ul> <p>js实现：</p> <div class="language-vue line-numbers-mode"><pre class="language-vue"><code>class TreeNode {
+    constructor(value) {
+        this.value = value;
+        this.left = null;
+        this.right = null;
+    }
+}
+
+class CompleteBinarySearchTree {
+    constructor() {
+        this.root = null;
+        this.nodes = []; // 用于保持插入顺序，支持完全二叉树结构
+    }
+
+    insert(value) {
+        const newNode = new TreeNode(value);
+        this.nodes.push(newNode); // 将节点添加到数组中
+        
+        if (this.root === null) {
+            this.root = newNode; // 如果树为空，则新节点为根节点
+        } else {
+            // 找到父节点
+            const index = this.nodes.length - 1;
+            const parentIndex = Math.floor((index - 1) / 2);
+            const parentNode = this.nodes[parentIndex];
+
+            if (index % 2 === 1) {
+                parentNode.left = newNode; // 左子节点
+            } else {
+                parentNode.right = newNode; // 右子节点
+            }
+        }
+    }
+
+    inOrderTraversal(node = this.root) {
+        if (node) {
+            this.inOrderTraversal(node.left);
+            console.log(node.value);
+            this.inOrderTraversal(node.right);
+        }
+    }
+
+    preOrderTraversal(node = this.root) {
+        if (node) {
+            console.log(node.value);
+            this.preOrderTraversal(node.left);
+            this.preOrderTraversal(node.right);
+        }
+    }
+
+    postOrderTraversal(node = this.root) {
+        if (node) {
+            this.postOrderTraversal(node.left);
+            this.postOrderTraversal(node.right);
+            console.log(node.value);
+        }
+    }
+}
+
+// 使用示例
+const tree = new CompleteBinarySearchTree();
+tree.insert(10);
+tree.insert(5);
+tree.insert(15);
+tree.insert(3);
+tree.insert(7);
+tree.insert(12);
+tree.insert(18);
+
+console.log(&quot;In-order traversal:&quot;);
+tree.inOrderTraversal(); // 应该按照排序顺序输出
+console.log(&quot;Pre-order traversal:&quot;);
+tree.preOrderTraversal();
+console.log(&quot;Post-order traversal:&quot;);
+tree.postOrderTraversal();
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br></div></div><h3 id="_3-3-4-二叉搜索树-binary-search-tree-bst"><a href="#_3-3-4-二叉搜索树-binary-search-tree-bst" class="header-anchor">#</a> 3.3.4. 二叉搜索树（Binary Search Tree, BST）</h3> <ul><li><strong>定义</strong>：一种特殊的二叉树，满足以下条件：对于每个节点，左子树的所有节点的值都小于该节点的值，右子树的所有节点的值都大于该节点的值。</li> <li><strong>特点</strong>：二叉搜索树并不要求每个节点都有两个子节点，也没有层数的限制，但它必须满足排序的性质。</li> <li><strong>关系</strong>：二叉搜索树是一种特殊的普通二叉树，但不一定是满二叉树或完全二叉树。</li></ul> <p>js实现：</p> <div class="language-vue line-numbers-mode"><pre class="language-vue"><code>class TreeNode {
+    constructor(value) {
+        this.value = value;
+        this.left = null;
+        this.right = null;
+    }
+}
+
+class BinarySearchTree {
+    constructor() {
+        this.root = null;
+    }
+
+    insert(value) {
+        const newNode = new TreeNode(value);
+        if (this.root === null) {
+            this.root = newNode; // 如果树为空，设定新节点为根节点
+        } else {
+            this._insertNode(this.root, newNode); // 从根节点开始插入
+        }
+    }
+
+    _insertNode(node, newNode) {
+        if (newNode.value &lt; node.value) {
+            if (node.left === null) {
+                node.left = newNode; // 左子树为空，插入新节点
+            } else {
+                this._insertNode(node.left, newNode); // 递归插入左子树
+            }
+        } else {
+            if (node.right === null) {
+                node.right = newNode; // 右子树为空，插入新节点
+            } else {
+                this._insertNode(node.right, newNode); // 递归插入右子树
+            }
+        }
+    }
+
+    find(value) {
+        return this._findNode(this.root, value);
+    }
+
+    _findNode(node, value) {
+        if (node === null) return false; // 节点为空，未找到
+        if (value === node.value) return true; // 找到节点
+        return value &lt; node.value
+            ? this._findNode(node.left, value) // 递归查找左子树
+            : this._findNode(node.right, value); // 递归查找右子树
+    }
+
+    inOrderTraversal(node = this.root) {
+        if (node) {
+            this.inOrderTraversal(node.left);
+            console.log(node.value);
+            this.inOrderTraversal(node.right);
+        }
+    }
+}
+
+// 使用示例
+const bst = new BinarySearchTree();
+bst.insert(10);
+bst.insert(5);
+bst.insert(15);
+bst.insert(3);
+bst.insert(7);
+bst.insert(12);
+bst.insert(18);
+
+console.log(&quot;In-order traversal:&quot;);
+bst.inOrderTraversal(); // 按升序输出
+console.log(&quot;Find 7:&quot;, bst.find(7)); // 输出 true
+console.log(&quot;Find 20:&quot;, bst.find(20)); // 输出 false
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br></div></div><h3 id="_3-3-5、总结关系"><a href="#_3-3-5、总结关系" class="header-anchor">#</a> 3.3.5、总结关系</h3> <ul><li><strong>普通二叉树</strong> 是一个广泛的概念，包含所有类型的二叉树。</li> <li><strong>满二叉树</strong> 和 <strong>完全二叉树</strong> 都是普通二叉树的特例，但有各自的结构要求。</li> <li><strong>二叉搜索树</strong> 也是普通二叉树的一种，强调了节点的值的排序特性，而不强调节点的数量或层数的完整性。</li></ul> <h2 id="_3-4、图"><a href="#_3-4、图" class="header-anchor">#</a> 3.4、图</h2> <p>图接触不是很多，所以很难解释得清楚</p> <h2 id="_3-5、其他"><a href="#_3-5、其他" class="header-anchor">#</a> 3.5、其他</h2> <h3 id="_3-5-1、set"><a href="#_3-5-1、set" class="header-anchor">#</a> 3.5.1、set</h3> <p>关于set主要是js的es6推出的，主要关注set与weakSet的区别、</p> <p>记住set里面的数据是不可重复的，所以也能做去重操作</p> <p>js使用</p> <div class="language-vue line-numbers-mode"><pre class="language-vue"><code>const mySet = new Set();
+mySet.add(1);
+mySet.add({ name: 'Alice' });
+console.log(mySet); // Set(2) { 1, { name: 'Alice' } }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="_3-5-2、map"><a href="#_3-5-2、map" class="header-anchor">#</a> 3.5.2、map</h3> <h1 id="四、算法"><a href="#四、算法" class="header-anchor">#</a> 四、算法</h1> <p>专门独立一章《基于js的算法入门》</p> <h1 id="参考资料"><a href="#参考资料" class="header-anchor">#</a> 参考资料</h1> <p>1、https://blog.csdn.net/qq_37255976/article/details/134464573</p> <p>2、https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Data_structures</p></div></section> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">2024/11/3 20:11:49</span></div></footer> <!----> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:0;" data-v-b57cc07c data-v-7dd95ae2></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/BlockPage/assets/js/app.e0755670.js" defer></script><script src="/BlockPage/assets/js/3.1cac54e6.js" defer></script><script src="/BlockPage/assets/js/1.60ac1d5d.js" defer></script><script src="/BlockPage/assets/js/13.e73038a4.js" defer></script>
+  </body>
+</html>

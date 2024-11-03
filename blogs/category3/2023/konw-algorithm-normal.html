@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>基于js的算法之-常用 | 忆梦世界</title>
+    <title>基于JS算法-常用排序算法 | 忆梦世界</title>
     <meta name="generator" content="VuePress 1.9.7">
     <link rel="icon" href="/BlockPage/favicon.ico">
     <meta name="description" content="常用">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
     
-    <link rel="preload" href="/BlockPage/assets/css/0.styles.29da6d54.css" as="style"><link rel="preload" href="/BlockPage/assets/js/app.b6591cc1.js" as="script"><link rel="preload" href="/BlockPage/assets/js/3.93c081f1.js" as="script"><link rel="preload" href="/BlockPage/assets/js/1.0326d380.js" as="script"><link rel="preload" href="/BlockPage/assets/js/22.1251a775.js" as="script"><link rel="prefetch" href="/BlockPage/assets/js/10.e6d100ac.js"><link rel="prefetch" href="/BlockPage/assets/js/11.ec1f5891.js"><link rel="prefetch" href="/BlockPage/assets/js/12.9fa6579e.js"><link rel="prefetch" href="/BlockPage/assets/js/13.5c2ebd6e.js"><link rel="prefetch" href="/BlockPage/assets/js/14.f8d45e8e.js"><link rel="prefetch" href="/BlockPage/assets/js/15.4fe2bf0a.js"><link rel="prefetch" href="/BlockPage/assets/js/16.e3f05a44.js"><link rel="prefetch" href="/BlockPage/assets/js/17.0e4468ef.js"><link rel="prefetch" href="/BlockPage/assets/js/18.672204b2.js"><link rel="prefetch" href="/BlockPage/assets/js/19.091c450c.js"><link rel="prefetch" href="/BlockPage/assets/js/20.38f3107b.js"><link rel="prefetch" href="/BlockPage/assets/js/21.7db64fbf.js"><link rel="prefetch" href="/BlockPage/assets/js/23.6f156726.js"><link rel="prefetch" href="/BlockPage/assets/js/24.08eac27a.js"><link rel="prefetch" href="/BlockPage/assets/js/25.9cf9840a.js"><link rel="prefetch" href="/BlockPage/assets/js/26.bcded01b.js"><link rel="prefetch" href="/BlockPage/assets/js/27.700da83d.js"><link rel="prefetch" href="/BlockPage/assets/js/28.51f507fc.js"><link rel="prefetch" href="/BlockPage/assets/js/29.d1fcccca.js"><link rel="prefetch" href="/BlockPage/assets/js/30.61b46eac.js"><link rel="prefetch" href="/BlockPage/assets/js/31.c06d7d8b.js"><link rel="prefetch" href="/BlockPage/assets/js/32.a7db3838.js"><link rel="prefetch" href="/BlockPage/assets/js/33.4108ed13.js"><link rel="prefetch" href="/BlockPage/assets/js/34.6aba8584.js"><link rel="prefetch" href="/BlockPage/assets/js/35.d08f7a86.js"><link rel="prefetch" href="/BlockPage/assets/js/36.592ed895.js"><link rel="prefetch" href="/BlockPage/assets/js/37.8e146454.js"><link rel="prefetch" href="/BlockPage/assets/js/38.3ab1fd2f.js"><link rel="prefetch" href="/BlockPage/assets/js/39.c8f18515.js"><link rel="prefetch" href="/BlockPage/assets/js/4.7b256050.js"><link rel="prefetch" href="/BlockPage/assets/js/5.783915d4.js"><link rel="prefetch" href="/BlockPage/assets/js/6.ddd60395.js"><link rel="prefetch" href="/BlockPage/assets/js/7.5753c921.js"><link rel="prefetch" href="/BlockPage/assets/js/8.3b5211c8.js"><link rel="prefetch" href="/BlockPage/assets/js/9.65161a94.js">
-    <link rel="stylesheet" href="/BlockPage/assets/css/0.styles.29da6d54.css">
+    <link rel="preload" href="/BlockPage/assets/css/0.styles.a5d53f1e.css" as="style"><link rel="preload" href="/BlockPage/assets/js/app.e0755670.js" as="script"><link rel="preload" href="/BlockPage/assets/js/3.1cac54e6.js" as="script"><link rel="preload" href="/BlockPage/assets/js/1.60ac1d5d.js" as="script"><link rel="preload" href="/BlockPage/assets/js/18.b6e203c7.js" as="script"><link rel="prefetch" href="/BlockPage/assets/js/10.c4d2ea98.js"><link rel="prefetch" href="/BlockPage/assets/js/11.11e3ec6b.js"><link rel="prefetch" href="/BlockPage/assets/js/12.f60c7358.js"><link rel="prefetch" href="/BlockPage/assets/js/13.e73038a4.js"><link rel="prefetch" href="/BlockPage/assets/js/14.100c5700.js"><link rel="prefetch" href="/BlockPage/assets/js/15.bbe03cf5.js"><link rel="prefetch" href="/BlockPage/assets/js/16.cfc772a3.js"><link rel="prefetch" href="/BlockPage/assets/js/17.05d24059.js"><link rel="prefetch" href="/BlockPage/assets/js/19.bbe179a9.js"><link rel="prefetch" href="/BlockPage/assets/js/20.2a426f7a.js"><link rel="prefetch" href="/BlockPage/assets/js/21.eedbab06.js"><link rel="prefetch" href="/BlockPage/assets/js/22.fbc3e643.js"><link rel="prefetch" href="/BlockPage/assets/js/23.368303b1.js"><link rel="prefetch" href="/BlockPage/assets/js/24.4d3ba923.js"><link rel="prefetch" href="/BlockPage/assets/js/25.65b50a3f.js"><link rel="prefetch" href="/BlockPage/assets/js/26.cd079d7c.js"><link rel="prefetch" href="/BlockPage/assets/js/27.817ec729.js"><link rel="prefetch" href="/BlockPage/assets/js/28.9a8a7129.js"><link rel="prefetch" href="/BlockPage/assets/js/29.4428032a.js"><link rel="prefetch" href="/BlockPage/assets/js/30.4bbd7322.js"><link rel="prefetch" href="/BlockPage/assets/js/31.30fd3d77.js"><link rel="prefetch" href="/BlockPage/assets/js/32.ffa54f99.js"><link rel="prefetch" href="/BlockPage/assets/js/33.dc473b32.js"><link rel="prefetch" href="/BlockPage/assets/js/34.be3da787.js"><link rel="prefetch" href="/BlockPage/assets/js/35.81cdbb3e.js"><link rel="prefetch" href="/BlockPage/assets/js/36.3d44601c.js"><link rel="prefetch" href="/BlockPage/assets/js/37.6b27fae1.js"><link rel="prefetch" href="/BlockPage/assets/js/38.a880088e.js"><link rel="prefetch" href="/BlockPage/assets/js/39.6caec71d.js"><link rel="prefetch" href="/BlockPage/assets/js/4.f4d4a1f1.js"><link rel="prefetch" href="/BlockPage/assets/js/40.303b71d4.js"><link rel="prefetch" href="/BlockPage/assets/js/5.dc80210c.js"><link rel="prefetch" href="/BlockPage/assets/js/6.24a464e0.js"><link rel="prefetch" href="/BlockPage/assets/js/7.05e9588f.js"><link rel="prefetch" href="/BlockPage/assets/js/8.506fdc2d.js"><link rel="prefetch" href="/BlockPage/assets/js/9.80c87b8e.js">
+    <link rel="stylesheet" href="/BlockPage/assets/css/0.styles.a5d53f1e.css">
   </head>
   <body>
     <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>忆梦世界</h3> <p class="description" data-v-59e6cb88></p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>ljt</span>
@@ -21,12 +21,12 @@
   首页
 </a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
       目录
-    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/BlockPage/categories/知识分享/" class="nav-link"><i class="undefined"></i>
-  知识分享
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/BlockPage/categories/技术方案/" class="nav-link"><i class="undefined"></i>
+  技术方案
 </a></li><li class="dropdown-item"><!----> <a href="/BlockPage/categories/开发工具/" class="nav-link"><i class="undefined"></i>
   开发工具
-</a></li><li class="dropdown-item"><!----> <a href="/BlockPage/categories/技术方案/" class="nav-link"><i class="undefined"></i>
-  技术方案
+</a></li><li class="dropdown-item"><!----> <a href="/BlockPage/categories/知识分享/" class="nav-link"><i class="undefined"></i>
+  知识分享
 </a></li><li class="dropdown-item"><!----> <a href="/BlockPage/categories/个人/" class="nav-link"><i class="undefined"></i>
   个人
 </a></li></ul></div></div><div class="nav-item"><a href="/BlockPage/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
@@ -53,16 +53,16 @@
   个人App
 </a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><img src="/BlockPage/avatar.png" alt="author-avatar" class="personal-img" data-v-1fad0c41> <h3 class="name" data-v-1fad0c41>
     ljt
-  </h3> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>28</h3> <h6 data-v-1fad0c41>文章</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>8</h3> <h6 data-v-1fad0c41>标签</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/BlockPage/" class="nav-link"><i class="iconfont reco-home"></i>
+  </h3> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>30</h3> <h6 data-v-1fad0c41>文章</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>8</h3> <h6 data-v-1fad0c41>标签</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/BlockPage/" class="nav-link"><i class="iconfont reco-home"></i>
   首页
 </a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
       目录
-    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/BlockPage/categories/知识分享/" class="nav-link"><i class="undefined"></i>
-  知识分享
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/BlockPage/categories/技术方案/" class="nav-link"><i class="undefined"></i>
+  技术方案
 </a></li><li class="dropdown-item"><!----> <a href="/BlockPage/categories/开发工具/" class="nav-link"><i class="undefined"></i>
   开发工具
-</a></li><li class="dropdown-item"><!----> <a href="/BlockPage/categories/技术方案/" class="nav-link"><i class="undefined"></i>
-  技术方案
+</a></li><li class="dropdown-item"><!----> <a href="/BlockPage/categories/知识分享/" class="nav-link"><i class="undefined"></i>
+  知识分享
 </a></li><li class="dropdown-item"><!----> <a href="/BlockPage/categories/个人/" class="nav-link"><i class="undefined"></i>
   个人
 </a></li></ul></div></div><div class="nav-item"><a href="/BlockPage/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
@@ -87,21 +87,265 @@
   个人csdn
   <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="/BlockPage/blogs/other/appInterview.html" class="nav-link"><i class="iconfont icon-wodexiao"></i>
   个人App
-</a></li></ul></div></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>基于js的算法之-常用</h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>ljt</span>
+</a></li></ul></div></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>基于JS算法-常用排序算法</h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>ljt</span>
           
         <span data-v-59e6cb88>2023 - </span>
         2024
-      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page" style="padding-right:0;"><section style="display:;"><div class="page-title"><h1 class="title">基于js的算法之-常用</h1> <div data-v-8a445198><i class="iconfont reco-account" data-v-8a445198><span data-v-8a445198>ljt</span></i> <i class="iconfont reco-date" data-v-8a445198><span data-v-8a445198>2023/12/24</span></i> <!----> <i class="tags iconfont reco-tag" data-v-8a445198><span class="tag-item" data-v-8a445198>算法</span></i></div></div> <div class="theme-reco-content content__default"><p>1、生成二维数组
-2、遍历对象
-3、使用map
-4、使用array当作栈、队列
-5、使用set
-6、array的常用api使用
-7、object的常用api
-8、Math的常用api
-9、生成二叉树
-10、字母的acsII
-11、字符串操作（获取长度、某个子字符、）</p></div></section> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">2024/1/11 下午5:01:14</span></div></footer> <!----> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:0;" data-v-b57cc07c data-v-7dd95ae2></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
-    <script src="/BlockPage/assets/js/app.b6591cc1.js" defer></script><script src="/BlockPage/assets/js/3.93c081f1.js" defer></script><script src="/BlockPage/assets/js/1.0326d380.js" defer></script><script src="/BlockPage/assets/js/22.1251a775.js" defer></script>
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page" style="padding-right:0;"><section style="display:;"><div class="page-title"><h1 class="title">基于JS算法-常用排序算法</h1> <div data-v-8a445198><i class="iconfont reco-account" data-v-8a445198><span data-v-8a445198>ljt</span></i> <i class="iconfont reco-date" data-v-8a445198><span data-v-8a445198>2023/12/24</span></i> <!----> <i class="tags iconfont reco-tag" data-v-8a445198><span class="tag-item" data-v-8a445198>算法</span></i></div></div> <div class="theme-reco-content content__default"><h1 id="前沿"><a href="#前沿" class="header-anchor">#</a> 前沿</h1> <p>亮点：</p> <p>1、思维导图</p> <p>2、例子代码</p> <h1 id="思维导图"><a href="#思维导图" class="header-anchor">#</a> 思维导图</h1> <div><img src="/BlockPage/assets/img/2.ebea57e7.png"></div> <h1 id="概要"><a href="#概要" class="header-anchor">#</a> 概要</h1> <ul><li>主要讲解十大排序，基于js实现</li> <li>总结是空间换时间、时间换空间</li></ul> <h1 id="时间复杂度为o-n-2"><a href="#时间复杂度为o-n-2" class="header-anchor">#</a> 时间复杂度为O（n^2）</h1> <h2 id="冒泡排序"><a href="#冒泡排序" class="header-anchor">#</a> 冒泡排序</h2> <p>js代码实现</p> <div class="language-vue line-numbers-mode"><pre class="language-vue"><code>function bubbleSort(arr) {
+    const n = arr.length;
+    let swapped;
+
+    // 外层循环控制排序的轮数
+    for (let i = 0; i &lt; n - 1; i++) {
+        swapped = false; // 每一轮开始时假设没有交换
+
+        // 内层循环进行相邻元素的比较和交换
+        for (let j = 0; j &lt; n - 1 - i; j++) {
+            if (arr[j] &gt; arr[j + 1]) {
+                // 交换
+                [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+                swapped = true; // 记录发生了交换
+            }
+        }
+
+        // 如果这一轮没有交换，数组已经是有序的，可以提前退出
+        if (!swapped) {
+            break;
+        }
+    }
+
+    return arr;
+}
+
+// 示例
+const arr = [64, 34, 25, 12, 22, 11, 90];
+const sortedArr = bubbleSort(arr);
+console.log(sortedArr);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br></div></div><p>操作解释</p> <ol><li>外层循环：控制整个排序的轮数。每次迭代确保至少将一个元素放到正确的位置。</li> <li>内层循环：比较相邻的元素，如果它们的顺序错误，则交换它们。<code>n - 1 - i</code> 是因为每轮后最大的元素会被放到正确的位置，所以可以减少比较的次数。</li> <li>优化：使用 <code>swapped</code> 标志，如果一轮内没有交换，说明数组已经有序，可以提前退出循环，从而提高效率。</li></ol> <h2 id="插入排序"><a href="#插入排序" class="header-anchor">#</a> 插入排序</h2> <p>基于js代码实现</p> <div class="language-vue line-numbers-mode"><pre class="language-vue"><code>function insertionSort(arr) {
+    for (let i = 1; i &lt; arr.length; i++) {
+        const key = arr[i];
+        let j = i - 1;
+
+        // 将大于 key 的元素移动到右边
+        while (j &gt;= 0 &amp;&amp; arr[j] &gt; key) {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+
+        // 将 key 插入到合适的位置
+        arr[j + 1] = key;
+    }
+    return arr;
+}
+
+// 示例用法
+const array = [5, 2, 9, 1, 5, 6];
+const sortedArray = insertionSort(array);
+console.log(sortedArray); // 输出: [1, 2, 5, 5, 6, 9]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><p>操作解释</p> <ol><li>外层循环：从第二个元素开始遍历数组（索引从 1 开始），将每个元素视为待插入的 <code>key</code>。</li> <li>内层循环：从 <code>key</code> 的前一个元素开始，向左遍历已排序部分，将大于 <code>key</code> 的元素向右移动一位，为 <code>key</code> 腾出位置。</li> <li>插入：将 <code>key</code> 插入到正确的位置。</li></ol> <h1 id="时间复杂度为o-log-n"><a href="#时间复杂度为o-log-n" class="header-anchor">#</a> 时间复杂度为O（log(n)）</h1> <h2 id="快速排序"><a href="#快速排序" class="header-anchor">#</a> 快速排序</h2> <p>基于js代码实现</p> <div class="language-vue line-numbers-mode"><pre class="language-vue"><code>function quickSort(arr) {
+    // 基础情况：数组为空或只包含一个元素
+    if (arr.length &lt;= 1) {
+        return arr;
+    }
+
+    // 选择基准（pivot），这里选择数组的最后一个元素
+    const pivot = arr[arr.length - 1];
+    const left = [];  // 存放小于基准的元素
+    const right = []; // 存放大于基准的元素
+
+    // 遍历数组（不包括基准）
+    for (let i = 0; i &lt; arr.length - 1; i++) {
+        if (arr[i] &lt; pivot) {
+            left.push(arr[i]); // 小于基准的放左边
+        } else {
+            right.push(arr[i]); // 大于基准的放右边
+        }
+    }
+
+    // 递归调用快速排序并合并结果
+    return [...quickSort(left), pivot, ...quickSort(right)];
+}
+
+// 示例用法
+const array = [5, 2, 9, 1, 5, 6];
+const sortedArray = quickSort(array);
+console.log(sortedArray); // 输出: [1, 2, 5, 5, 6, 9]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br></div></div><p>操作</p> <ol><li>基础情况：如果数组为空或只包含一个元素，则直接返回该数组，因为它已经是有序的。</li> <li>选择基准：选择数组的最后一个元素作为基准（<code>pivot</code>）。</li> <li>分割数组：遍历数组（不包括基准），将小于基准的元素放入 <code>left</code> 数组，大于基准的元素放入 <code>right</code> 数组。</li> <li>递归调用：分别对 <code>left</code> 和 <code>right</code> 数组进行快速排序，并将结果合并，最后在中间插入基准。</li></ol> <h2 id="归并排序"><a href="#归并排序" class="header-anchor">#</a> 归并排序</h2> <p>基于js代码实现</p> <div class="language-vue line-numbers-mode"><pre class="language-vue"><code>function mergeSort(arr) {
+    // 基础情况：数组为空或只包含一个元素
+    if (arr.length &lt;= 1) {
+        return arr;
+    }
+
+    // 找到中间索引
+    const mid = Math.floor(arr.length / 2);
+    // 递归分割数组
+    const left = mergeSort(arr.slice(0, mid));
+    const right = mergeSort(arr.slice(mid));
+
+    // 合并已排序的子数组
+    return merge(left, right);
+}
+
+function merge(left, right) {
+    const result = [];
+    let i = 0; // 左边数组的指针
+    let j = 0; // 右边数组的指针
+
+    // 合并两个已排序的数组
+    while (i &lt; left.length &amp;&amp; j &lt; right.length) {
+        if (left[i] &lt; right[j]) {
+            result.push(left[i]);
+            i++;
+        } else {
+            result.push(right[j]);
+            j++;
+        }
+    }
+
+    // 将剩余元素添加到结果数组
+    return result.concat(left.slice(i)).concat(right.slice(j));
+}
+
+// 示例用法
+const array = [5, 2, 9, 1, 5, 6];
+const sortedArray = mergeSort(array);
+console.log(sortedArray); // 输出: [1, 2, 5, 5, 6, 9]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br></div></div><p>操作</p> <ol><li>基础情况：如果数组为空或只包含一个元素，直接返回该数组。</li> <li>分割数组：通过中间索引将数组分为两个子数组，分别递归调用 <code>mergeSort</code> 进行排序。</li> <li>合并：使用 <code>merge</code> 函数将两个已排序的子数组合并成一个有序数组。该函数使用两个指针遍历两个子数组，并比较元素，将较小的元素放入结果数组中。</li> <li>返回结果：在合并完成后，返回合并后的有序数组。</li></ol> <h2 id="希尔排序"><a href="#希尔排序" class="header-anchor">#</a> 希尔排序</h2> <p>js实现</p> <div class="language-vue line-numbers-mode"><pre class="language-vue"><code>function shellSort(arr) {
+    const n = arr.length;
+    let gap = Math.floor(n / 2); // 初始间隔为数组长度的一半
+
+    // 逐步缩小间隔
+    while (gap &gt; 0) {
+        // 对每个间隔进行插入排序
+        for (let i = gap; i &lt; n; i++) {
+            const temp = arr[i]; // 当前要插入的元素
+            let j = i; // 当前元素的索引
+
+            // 插入排序
+            while (j &gt;= gap &amp;&amp; arr[j - gap] &gt; temp) {
+                arr[j] = arr[j - gap]; // 移动元素
+                j -= gap; // 更新索引
+            }
+
+            arr[j] = temp; // 插入当前元素
+        }
+        gap = Math.floor(gap / 2); // 缩小间隔
+    }
+
+    return arr;
+}
+
+// 示例用法
+const array = [5, 2, 9, 1, 5, 6];
+const sortedArray = shellSort(array);
+console.log(sortedArray); // 输出: [1, 2, 5, 5, 6, 9]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br></div></div><p>操作</p> <ol><li>初始化间隔：设置初始间隔为数组长度的一半。</li> <li>逐步缩小间隔：在 <code>while</code> 循环中，逐步减小间隔（gap）。</li> <li>插入排序：对于每个间隔，进行插入排序。内层循环负责将当前元素插入到正确的位置。</li> <li>返回结果：完成排序后返回排序后的数组。</li></ol> <h1 id="时间复杂度为o-nlog-n"><a href="#时间复杂度为o-nlog-n" class="header-anchor">#</a> 时间复杂度为O（nlog(n)）</h1> <h2 id="堆排序"><a href="#堆排序" class="header-anchor">#</a> 堆排序</h2> <p>基于js实现</p> <div class="language-vue line-numbers-mode"><pre class="language-vue"><code>function heapSort(arr) {
+    const n = arr.length;
+
+    // 构建最大堆
+    function buildMaxHeap() {
+        for (let i = Math.floor(n / 2) - 1; i &gt;= 0; i--) {
+            heapify(i, n);
+        }
+    }
+
+    // 堆化
+    function heapify(i, heapSize) {
+        let largest = i;
+        const left = 2 * i + 1; // 左子节点
+        const right = 2 * i + 2; // 右子节点
+
+        if (left &lt; heapSize &amp;&amp; arr[left] &gt; arr[largest]) {
+            largest = left;
+        }
+        if (right &lt; heapSize &amp;&amp; arr[right] &gt; arr[largest]) {
+            largest = right;
+        }
+        if (largest !== i) {
+            [arr[i], arr[largest]] = [arr[largest], arr[i]]; // 交换
+            heapify(largest, heapSize); // 递归堆化
+        }
+    }
+
+    buildMaxHeap();
+
+    // 进行排序
+    for (let i = n - 1; i &gt; 0; i--) {
+        [arr[0], arr[i]] = [arr[i], arr[0]]; // 将最大元素放到数组末尾
+        heapify(0, i); // 对剩余的元素进行堆化
+    }
+
+    return arr;
+}
+
+// 示例
+const arr = [3, 5, 1, 10, 2, 7];
+const sortedArr = heapSort(arr);
+console.log(sortedArr);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br></div></div><p>代码解释</p> <ol><li>构建最大堆：<code>buildMaxHeap</code> 函数从最后一个非叶子节点开始，向上调整每个节点，构建出一个最大堆。</li> <li>堆化：<code>heapify</code> 函数确保以 <code>i</code> 为根的子树是一个最大堆。它检查当前节点与其左右子节点的值，若有子节点比当前节点大，则进行交换，并递归调整。</li> <li>排序过程：在 <code>heapSort</code> 函数中，将最大元素（根节点）与数组末尾的元素交换，然后对剩余的元素重新堆化，以保证它们依然形成最大堆。</li></ol> <h1 id="时间复杂度为o-n"><a href="#时间复杂度为o-n" class="header-anchor">#</a> 时间复杂度为O（n）</h1> <h2 id="桶排序"><a href="#桶排序" class="header-anchor">#</a> 桶排序</h2> <p>基于js实现</p> <div class="language-vue line-numbers-mode"><pre class="language-vue"><code>function bucketSort(arr) {
+    if (arr.length === 0) return [];
+
+    // 1. 创建桶
+    const minValue = Math.min(...arr);
+    const maxValue = Math.max(...arr);
+    const bucketCount = Math.floor((maxValue - minValue) / arr.length) + 1;
+    const buckets = Array.from({ length: bucketCount }, () =&gt; []);
+
+    // 2. 将元素放入桶中
+    for (let num of arr) {
+        const index = Math.floor((num - minValue) / arr.length);
+        buckets[index].push(num);
+    }
+
+    // 3. 对每个桶进行排序并合并结果
+    return buckets.reduce((sortedArr, bucket) =&gt; {
+        return sortedArr.concat(bucket.sort((a, b) =&gt; a - b));
+    }, []);
+}
+
+// 示例
+const arr = [0.78, 0.17, 0.39, 0.26, 0.72, 0.94, 0.21, 0.12];
+const sortedArr = bucketSort(arr);
+console.log(sortedArr);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br></div></div><p>代码解释</p> <ol><li>创建桶：根据数组中的最小值和最大值，计算出桶的数量，并初始化桶数组。</li> <li>将元素放入桶中：根据每个元素的值计算它应该放入哪个桶中。</li> <li>排序并合并结果：对每个桶内的元素进行排序，然后将它们合并成一个最终的排序数组。</li></ol> <h2 id="计数排序"><a href="#计数排序" class="header-anchor">#</a> 计数排序</h2> <p>基于js实现</p> <div class="language-vue line-numbers-mode"><pre class="language-vue"><code> function countingSort(arr) {
+    if (arr.length === 0) return arr;
+
+    // 找到最大值和最小值
+    const min = Math.min(...arr);
+    const max = Math.max(...arr);
+    const range = max - min + 1;
+
+    // 创建计数数组
+    const count = new Array(range).fill(0);
+
+    // 计数每个元素出现的次数
+    for (let num of arr) {
+        count[num - min]++;
+    }
+
+    // 累加计数数组
+    for (let i = 1; i &lt; count.length; i++) {
+        count[i] += count[i - 1];
+    }
+
+    // 创建输出数组
+    const output = new Array(arr.length);
+
+    // 根据计数数组填充输出数组
+    for (let i = arr.length - 1; i &gt;= 0; i--) {
+        const num = arr[i];
+        output[count[num - min] - 1] = num;
+        count[num - min]--;
+    }
+
+    return output;
+}
+
+// 示例用法
+const arr = [4, 2, 2, 8, 3, 3, 1];
+const sortedArr = countingSort(arr);
+console.log(sortedArr); // 输出: [1, 2, 2, 3, 3, 4, 8]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br></div></div><p>代码解释</p> <ol><li>找到最大值和最小值：用 <code>Math.min</code> 和 <code>Math.max</code> 方法找到数组中的最大和最小值，以确定计数数组的大小。</li> <li>创建计数数组：根据值的范围创建一个计数数组，并用零填充。</li> <li>计数：遍历原数组，记录每个元素的出现次数。</li> <li>累加计数：对计数数组进行累加，使得每个位置存储的是该元素在排序后应该出现的最后位置。</li> <li>填充输出数组：从原数组的最后一个元素开始，根据计数数组确定每个元素在输出数组中的位置，并更新计数数组。</li> <li>返回结果：返回排序后的数组。</li></ol> <h1 id="参考"><a href="#参考" class="header-anchor">#</a> 参考</h1> <p>主要是收集每个实现js的代码</p></div></section> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">2024/11/3 20:11:49</span></div></footer> <!----> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:0;" data-v-b57cc07c data-v-7dd95ae2></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/BlockPage/assets/js/app.e0755670.js" defer></script><script src="/BlockPage/assets/js/3.1cac54e6.js" defer></script><script src="/BlockPage/assets/js/1.60ac1d5d.js" defer></script><script src="/BlockPage/assets/js/18.b6e203c7.js" defer></script>
   </body>
 </html>
