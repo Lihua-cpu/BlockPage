@@ -55,25 +55,26 @@ Sourcetree官网地址：[Sourcetree | Free Git GUI for Mac and Windows](https:/
 1.打开对应安装包
 
 <div>
-	<img src="../../../.vuepress\public\images\sourcetree\2_sourcetree_use.png" style="height:70%;width:70%" />
+	<img src="../../../.vuepress/public/images/sourcetree/2_sourcetree_use.png" style="height:70%;width:70%" />
 </div>
+
 
 2.安装指引
 
 <div>
-	<img src="../../../.vuepress\public\images\sourcetree\3_sourcetree_use.png" style="height:70%;width:70%" />
+	<img src="../../../.vuepress/public/images/sourcetree/3_sourcetree_use.png" style="height:70%;width:70%" />
 </div>
 
 3.显示sourcetree安装成功
 
 <div>
-	<img src="../../../.vuepress\public\images\sourcetree\4_sourcetree_use.png" style="height:70%;width:70%" />
+	<img src="../../../.vuepress/public/images/sourcetree/4_sourcetree_use.png" style="height:70%;width:70%" />
 </div>
 
 4.配置git的名称、邮箱
 
 <div>
-	<img src="../../../.vuepress\public\images\sourcetree\5_sourcetree_use.png" style="height:70%;width:70%" />
+	<img src="../../../.vuepress/public/images/sourcetree/5_sourcetree_use.png" style="height:70%;width:70%" />
 </div>
 
 5.一般不配置SSH
@@ -85,13 +86,13 @@ Sourcetree官网地址：[Sourcetree | Free Git GUI for Mac and Windows](https:/
 > 2、使用Http拉取代码，验证身份需要账号密码
 
 <div>
-	<img src="../../../.vuepress\public\images\sourcetree\6_sourcetree_use.png" style="height:70%;width:70%" />
+	<img src="../../../.vuepress/public/images/sourcetree/6_sourcetree_use.png" style="height:70%;width:70%" />
 </div>
 
 6.最后
 
 <div>
-	<img src="../../../.vuepress\public\images\sourcetree\7_sourcetree_use.png" style="height:80%;width:80%" />
+	<img src="../../../.vuepress/public/images/sourcetree/7_sourcetree_use.png" style="height:80%;width:80%" />
 </div>
 
 ## 四、source使用方法
@@ -101,7 +102,7 @@ Sourcetree官网地址：[Sourcetree | Free Git GUI for Mac and Windows](https:/
 
 
 <div>
-	<img src="../../../.vuepress\public\images\sourcetree\1_sourcetree_use.png" style="height:50%;width:50%" />
+	<img src="../../../.vuepress/public/images/sourcetree/1_sourcetree_use.png" style="height:50%;width:50%" />
 </div>
 
 Local: 本地仓库
@@ -117,21 +118,20 @@ Create：创建仓库
 ### 4.1创建仓库
 
 1.输入创建仓库的信息
-
 <div>
-	<img src="../../../.vuepress\public\images\sourcetree\10_sourcetree_use.png" style="height:100%;width:100%" />
+	<img src="../../../.vuepress/public/images/sourcetree/10_sourcetree_use.png" style="height:100%;width:100%" />
 </div>
 
 2.创建后本地目录
 
 <div>
-	<img src="../../../.vuepress\public\images\sourcetree\11_sourcetree_use.png" style="height:100%;width:100%" />
+	<img src="../../../.vuepress/public/images/sourcetree/11_sourcetree_use.png" style="height:100%;width:100%" />
 </div>
 
 3.创建后sourcetree展示区
 
 <div>
-	<img src="../../../.vuepress\public\images\sourcetree\12_sourcetree_use.png" style="height:100%;width:100%" />
+	<img src="../../../.vuepress/public/images/sourcetree/12_sourcetree_use.png" style="height:100%;width:100%" />
 </div>
 
 ### 4.2提交
@@ -139,13 +139,13 @@ Create：创建仓库
 1.提交
 
 <div>
-	<img src="../../../.vuepress\public\images\sourcetree\13_sourcetree_use.png" style="height:100%;width:100%" />
+	<img src="../../../.vuepress/public/images/sourcetree/13_sourcetree_use.png" style="height:100%;width:100%" />
 </div>
 
 2.查看提交历史
 
 <div>
-	<img src="../../../.vuepress\public\images\sourcetree\14_sourcetree_use.png" style="height:100%;width:100%" />
+	<img src="../../../.vuepress/public/images/sourcetree/14_sourcetree_use.png" style="height:100%;width:100%" />
 </div>
 
 ### 4.3推送
@@ -153,13 +153,13 @@ Create：创建仓库
 1.本地新建仓库未推送过
 
 <div>
-	<img src="../../../.vuepress\public\images\sourcetree\17_sourcetree_use.png" style="height:100%;width:100%" />
+	<img src="../../../.vuepress/public/images/sourcetree/17_sourcetree_use.png" style="height:100%;width:100%" />
 </div>
 
 2.远程有仓库推送
 
 <div>
-	<img src="../../../.vuepress\public\images\sourcetree\18_sourcetree_use.png" style="height:100%;width:100%" />
+	<img src="../../../.vuepress/public/images/sourcetree/18_sourcetree_use.png" style="height:100%;width:100%" />
 </div>
 
 
@@ -169,13 +169,13 @@ Create：创建仓库
 1.填写仓库地址
 
 <div>
-	<img src="../../../.vuepress\public\images\sourcetree\8_sourcetree_use.png" style="height:100%;width:100%" />
+	<img src="../../../.vuepress/public/images/sourcetree/8_sourcetree_use.png" style="height:100%;width:100%" />
 </div>
 
 2.确认仓库后可配置
 
 <div>
-	<img src="../../../.vuepress\public\images\sourcetree\9_sourcetree_use.png" style="height:100%;width:100%" />
+	<img src="../../../.vuepress/public/images/sourcetree/9_sourcetree_use.png" style="height:100%;width:100%" />
 </div>
 
 
@@ -187,13 +187,13 @@ Create：创建仓库
 1、检出新分支
 
 <div>
-	<img src="../../../.vuepress\public\images\sourcetree\15_sourcetree_use.png" style="height:100%;width:100%" />
+	<img src="../../../.vuepress/public/images/sourcetree/15_sourcetree_use.png" style="height:100%;width:100%" />
 </div>
 
 2、确定检出新分支
 
 <div>
-	<img src="../../../.vuepress\public\images\sourcetree\16_sourcetree_use.png" style="height:80%;width:80%" />
+	<img src="../../../.vuepress/public/images/sourcetree/16_sourcetree_use.png" style="height:80%;width:80%" />
 </div>
 
 ### 4.6添加分支
@@ -209,7 +209,7 @@ Create：创建仓库
 1.本地新建分支
 
 <div>
-	<img src="../../../.vuepress\public\images\sourcetree\19_sourcetree_use.png" style="height:80%;width:80%" />
+	<img src="../../../.vuepress/public/images/sourcetree/19_sourcetree_use.png" style="height:80%;width:80%" />
 </div>
 
 2.推到远程
